@@ -1,0 +1,17 @@
+var pessoa = {
+	idade: 19,
+	nome : "Lucca Dumas",
+	enderecos : [
+		{
+			rua: "Avenida",
+			numero: 99
+		},
+		{
+			rua: "Avenida2",
+			numero: 77
+		}
+	],
+	profissao : "Desenvolvedor"
+};
+
+//pessoa.enderecos[1].rua

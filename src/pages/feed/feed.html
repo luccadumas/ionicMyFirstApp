@@ -6,124 +6,125 @@
 -->
 <ion-header>
   <ion-navbar>
-    <ion-title>Feed</ion-title>
+    <ion-title>Feed de Notícias</ion-title>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
 
+  <!--User 1-->
   <ion-card>
     <ion-item>
       <ion-avatar item-start>
-        <img src="assets/images/photo.jpg">
+        <img src="assets/images/{{ obj_feed.user[0].photo }}">
       </ion-avatar>
-      <h2>{{nome_usuario}}</h2>
-      <p>13 de Setembro de 2017</p>
+      <h2>{{ obj_feed.user[0].username }}</h2>
+      <p>{{ obj_feed.post[0].date }}</p>
     </ion-item>
 
-    <img src="assets/images/1.jpg">
+    <img src="assets/images/{{ obj_feed.post[0].img }}">
 
     <ion-card-content>
-      <p>Primeiro App Teste Ionic.</p>
+      <p>{{ obj_feed.post[0].description }}</p>
+      <p>{{ obj_feed.user[0].address[0].street }}</p>
     </ion-card-content>
 
     <ion-row>
       <ion-col>
         <button ion-button icon-left clear small>
                 <ion-icon name="thumbs-up"></ion-icon>
-                <div>12 Likes</div>
+                <div>{{ obj_feed.post[0].num_likes }} Likes</div>
               </button>
       </ion-col>
       <ion-col>
         <button ion-button icon-left clear small>
                 <ion-icon name="text"></ion-icon>
-                <div>4 Comments</div>
+                <div>{{ obj_feed.post[0].num_comments }} Comments</div>
               </button>
       </ion-col>
       <ion-col center text-center>
         <ion-note>
-          11h ago
+          {{ obj_feed.post[0].time_comment }}
         </ion-note>
       </ion-col>
     </ion-row>
-
   </ion-card>
 
+  <!--User 2-->
   <ion-card>
-
     <ion-item>
       <ion-avatar item-start>
-        <img src="assets/images/photo.jpg">
+        <img src="assets/images/{{ obj_feed.user[1].photo }}">
       </ion-avatar>
-      <h2>Lucca Dumas</h2>
-      <p>13 de Setembro de 2017</p>
+      <h2>{{ obj_feed.user[1].username }}</h2>
+      <p>{{ obj_feed.post[1].date }}</p>
     </ion-item>
 
-    <img src="assets/images/2.png">
+    <img src="assets/images/{{ obj_feed.post[1].img }}">
 
     <ion-card-content>
-      <p>Primeiro App Teste Ionic.</p>
+      <p>{{ obj_feed.post[1].description }}</p>
+      <p>{{ obj_feed.user[1].address[1].street }}</p>
     </ion-card-content>
 
     <ion-row>
       <ion-col>
         <button ion-button icon-left clear small>
-                      <ion-icon name="thumbs-up"></ion-icon>
-                      <div>12 Likes</div>
-                    </button>
+                <ion-icon name="thumbs-up"></ion-icon>
+                <div>{{ obj_feed.post[1].num_likes }} Likes</div>
+              </button>
       </ion-col>
       <ion-col>
         <button ion-button icon-left clear small>
-                      <ion-icon name="text"></ion-icon>
-                      <div>4 Comments</div>
-                    </button>
+                <ion-icon name="text"></ion-icon>
+                <div>{{ obj_feed.post[1].num_comments }} Comments</div>
+              </button>
       </ion-col>
       <ion-col center text-center>
         <ion-note>
-          11h ago
+          {{ obj_feed.post[1].time_comment }}
         </ion-note>
       </ion-col>
     </ion-row>
-
   </ion-card>
 
+  <!--User 3-->
   <ion-card>
-
     <ion-item>
       <ion-avatar item-start>
-        <img src="assets/images/photo.jpg">
+        <img src="assets/images/{{ obj_feed.user[2].photo }}">
       </ion-avatar>
-      <h2>Lucca Dumas</h2>
-      <p>13 de Setembro de 2017</p>
+      <h2>{{ obj_feed.user[2].username }}</h2>
+      <p>{{ obj_feed.post[2].date }}</p>
     </ion-item>
 
-    <img src="assets/images/3.jpg">
+    <img src="assets/images/{{ obj_feed.post[2].img }}">
 
     <ion-card-content>
-      <p>Primeiro App Teste Ionic.</p>
+      <p>{{ obj_feed.post[2].description }}</p>
+      <p>{{ obj_feed.user[2].address[0].street }}</p>
     </ion-card-content>
 
     <ion-row>
       <ion-col>
         <button ion-button icon-left clear small>
-                            <ion-icon name="thumbs-up"></ion-icon>
-                            <div>12 Likes</div>
-                          </button>
+                <ion-icon name="thumbs-up"></ion-icon>
+                <div>{{ obj_feed.post[2].num_likes }} Likes</div>
+              </button>
       </ion-col>
       <ion-col>
         <button ion-button icon-left clear small>
-                            <ion-icon name="text"></ion-icon>
-                            <div>4 Comments</div>
-                          </button>
+                <ion-icon name="text"></ion-icon>
+                <div>{{ obj_feed.post[2].num_comments }} Comments</div>
+              </button>
       </ion-col>
       <ion-col center text-center>
         <ion-note>
-          11h ago
+          {{ obj_feed.post[2].time_comment }}
         </ion-note>
       </ion-col>
     </ion-row>
-
   </ion-card>
 
 </ion-content>

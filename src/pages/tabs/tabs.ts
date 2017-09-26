@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
 //import { ContactPage } from '../contact/contact';
 import { HomePage } from '../home/home';
 import { FeedPage } from '../feed/feed';
-import { ListaPage } from '../lista/lista';
+//import { ListaPage } from '../lista/lista';
 //import { Teste2Page } from '../teste2/teste2';
 //import { TestePage } from '../teste/teste';
 //import { IntroPage } from '../intro/intro';
@@ -18,7 +18,7 @@ export class TabsPage {
   //tab2Root = AboutPage;
   //tab3Root = ContactPage;
   tab4Root = FeedPage;
-  tab5Root = ListaPage;
+  //tab5Root = ListaPage;
   //tab7Root = Teste2Page;
   //tab6Root = TestePage;
   //tab4Root = IntroPage;
