@@ -106,7 +106,10 @@ export class FeedPage {
     ],
   }
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public navCtrl: NavController,
+    public navParams: NavParams
+  ) {
 
   }
 

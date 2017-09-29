@@ -15,6 +15,9 @@ import { ListaPageModule } from '../pages/lista/lista.module';
 import { IntroPageModule } from '../pages/intro/intro.module';
 import { TestePageModule } from '../pages/teste/teste.module';
 import { Teste2PageModule } from '../pages/teste2/teste2.module';
+import { HttpModule } from '@angular/http';
+import { MoviesProvider } from '../providers/movies/movies';
+import { FilmesPageModule } from '../pages/filmes/filmes.module';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,9 @@ import { Teste2PageModule } from '../pages/teste2/teste2.module';
     ListaPageModule,
     TestePageModule,
     Teste2PageModule,
-    IntroPageModule
+    IntroPageModule,
+    FilmesPageModule,
+    HttpModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -44,7 +49,8 @@ import { Teste2PageModule } from '../pages/teste2/teste2.module';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    MoviesProvider
   ]
 })
 export class AppModule {}
