@@ -5,13 +5,19 @@
 </ion-header>
 
 <ion-content padding>
-  <h2 class="intro-title">Welcome to Ionic!</h2>
+  <h2 class="intro-title">Bem-vindo ao meu primeiro app em Ionic!</h2>
   <p class="intro-p1">
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
+    Este app foi produzido para criação do meu primeiro app em Ionic, desta forma conigo por em prática todos meus conhecimento
+    dessa maravilhosa plantaforma.
   </p>
-  <p class="intro-p2">
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+
+  <ion-slides pager padding>
+    <ion-slide class="slider-img" *ngFor="let filme_slider of lista_filmes">
+      <img [src]="'https://image.tmdb.org/t/p/w300' + filme_slider.backdrop_path" alt="" />
+      <h2>{{ filme_slider.original_title }}</h2>
+    </ion-slide>
+  </ion-slides>
+
+  <button ion-button outline class="btn-main" (click)="goToFilmesPage()">Cochecer Página</button>
+
 </ion-content>

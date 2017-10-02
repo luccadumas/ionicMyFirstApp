@@ -19,7 +19,8 @@ export class MoviesProvider {
   }
 
   getLatestMovies(){
-    return this.http.get(this.baseApiPath + "movie/popular?api_key=" + this.apiKey);
+    return this.http.get(this.baseApiPath + "movie/popular?api_key=" + this.apiKey + "&language=pt-BR");
+    //return this.http.get("http://app.maissaudeonline.com.br:8000/api/consultas/");
   }
 
 }

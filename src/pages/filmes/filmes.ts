@@ -23,11 +23,14 @@ export class FilmesPage {
      ) {
   }
 
+  public lista_filmes = new Array<any>();
+
   ionViewDidLoad() {
     this.movieProvider.getLatestMovies().subscribe(
       data=>{
         const response = (data as any);
         const objeto_retorno = JSON.parse(response._body);
+        this.lista_filmes = objeto_retorno.results;
         console.log(objeto_retorno);
       },error => {
         console.log(error);
